@@ -8,8 +8,8 @@ echo -e "n\n4\n\n\n\nw" 	| fdisk /dev/sda
 
 echo -e "t\n1\n1\nw" | fdisk /dev/sda #boot
 echo -e "t\n2\n24\nw" | fdisk /dev/sda #root
-echo -e "t\n1\n19\nw" | fdisk /dev/sda #swap
-echo -e "t\n1\n28\nw" | fdisk /dev/sda #home
+echo -e "t\n3\n19\nw" | fdisk /dev/sda #swap
+echo -e "t\n4\n28\nw" | fdisk /dev/sda #home
 
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
